@@ -1,0 +1,6 @@
+/Manifest.toml
+/docs/Manifest.toml
+/docs/build/
+data/
+
+runner_definition.mk

@@ -1,0 +1,30 @@
+name = "SOBMOR"
+uuid = "8cadddcc-14b5-4cae-8412-8b5fc4864ffc"
+authors = ["Algopaul and contributors"]
+version = "1.0.0-DEV"
+
+[deps]
+ArgParse = "c7e460c6-2fb9-53a9-8c5b-16f535851c63"
+AutoPreallocation = "e7028de2-df94-4053-9fdc-99272086b8d4"
+BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+LoopVectorization = "bdcacae8-1622-11e9-2a5c-532679323890"
+Memoize = "c03570c3-d221-55d1-a50c-7939bbd78826"
+Optim = "429524aa-4258-5aef-a3af-852621145aeb"
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
+PortHamiltonianBenchmarkSystems = "a30e1a9a-10b8-4bba-9e65-ab6e41f71348"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+SLICOT_jll = "545525a2-e20e-568b-b87f-b40a06098995"
+SparseArrays = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
+
+[compat]
+julia = "1.10"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
