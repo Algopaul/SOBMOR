@@ -13,7 +13,7 @@ test:
 
 
 demo_portHamiltonian20:
-	$(RUN) julia ./scripts/driver.jl
+	$(RUN) julia ./scripts/driver.jl --initialization_noise_level 1e-3
 
 demo_parametricMOR: data
 	$(RUN) julia ./scripts/driver_parametric.jl --reduced_order=10
