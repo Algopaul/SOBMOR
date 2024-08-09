@@ -23,6 +23,9 @@ s = SOBMOR.add_default_options_parser(s)
   "--store_frequency_response"
   arg_type = Bool
   default = true
+  "--initialization_noise_level"
+  arg_type = Float64
+  default = 1e-1
 end
 
 args = parse_args(ARGS, s)
@@ -40,21 +43,23 @@ TriangularReshapes.lower_triang_to_vector!(id_init, Array(I(r) * 1.0));
 j_init = ones(div(r * (r - 1), 2))
 b_init = ones(r * 2)
 
+sigma = args["initialization_noise_level"]
+
 function get_initial_rom(args)
   if args["use_Q"]
     cfm, update_s, update_model, matrices = get_pH_system(r, 2)
     theta0 = [
-      j_init + 1e-3 * randn(MersenneTwister(0), size(j_init)...)
-      id_init + 1e-3 * randn(MersenneTwister(1), size(id_init)...)
-      id_init + 1e-3 * randn(MersenneTwister(2), size(id_init)...)
-      b_init + 1e-3 * randn(MersenneTwister(3), size(b_init)...)
+      j_init + sigma * randn(MersenneTwister(0), size(j_init)...)
+      id_init + sigma * randn(MersenneTwister(1), size(id_init)...)
+      id_init + sigma * randn(MersenneTwister(2), size(id_init)...)
+      b_init + sigma * randn(MersenneTwister(3), size(b_init)...)
     ]
   else
     cfm, update_s, update_model, matrices = get_pH_system_noQ(r, 2)
     theta0 = [
-      j_init + 1e-3 * randn(MersenneTwister(0), size(j_init)...)
-      id_init + 1e-3 * randn(MersenneTwister(1), size(id_init)...)
-      b_init + 1e-3 * randn(MersenneTwister(2), size(b_init)...)
+      j_init + sigma * randn(MersenneTwister(0), size(j_init)...)
+      id_init + sigma * randn(MersenneTwister(1), size(id_init)...)
+      b_init + sigma * randn(MersenneTwister(2), size(b_init)...)
     ]
   end
   return cfm, update_s, update_model, matrices, theta0
