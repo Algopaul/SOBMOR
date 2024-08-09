@@ -137,7 +137,8 @@ function getABCD_red(matrices)
 end
 
 A_red, B_red, C_red, D_red = getABCD_red(matrices)
-
+@info "Condition number of ROM.A is $(cond(A_red))"
+@info "Number of parameters is $(length(theta0))"
 @info "Computing H-infinity error of ROM using SLICOT-routine `ab13dd`"
 normval, hinffreq = linferr(A_full, B_full, C_full, D_full, A_red, B_red, C_red, D_red)
 @info "H-infinity error of ROM with order r=$r is $(@sprintf("%.4e", normval)) and is attained at $(@sprintf("%.4e", hinffreq))im"
