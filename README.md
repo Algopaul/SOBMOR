@@ -27,7 +27,7 @@ Moreover, I recommend trying the python frameworks `jax` and `flax`, which provi
 
 If you want to refer to this code, you can use the following citations:
 
-### General Structured optimization-based model order reduction
+#### General Structured optimization-based model order reduction
 ```latex
 @Article{SchwerdtnerV2023SOBMOR,
     author	= {Schwerdtner, Paul and Voigt, Matthias},
@@ -54,7 +54,7 @@ If you want to refer to this code, you can use the following citations:
 }
 ```
 
-### Adaptive sampling routine
+#### Adaptive sampling routine
 ```latex
 @Article{SchwerdtnerV2021Adaptive,
     title	= {Adaptive Sampling for Structure-Preserving Model Order Reduction of Port-{H}amiltonian Systems},
@@ -67,7 +67,7 @@ If you want to refer to this code, you can use the following citations:
     doi		= {10.1016/j.ifacol.2021.11.069}
 }
 ```
-### Parametric model order reduction
+#### Parametric model order reduction
 ```latex
 @Article{SchwerdtnerS2022Structured,
     author	= {Paul Schwerdtner and Manuel Schaller},
