@@ -42,15 +42,15 @@ If you want to refer to this code, you can use the following citations:
 }
 
 @Article{SchwerdtnerMMV2023Optimization-based,
-    title	= {Optimization-based model order reduction of port-Hamiltonian descriptor systems},
-    journal	= {Systems \& Control Letters},
-    volume	= {182},
-    pages	= {105655},
-    year	= {2023},
-    issn	= {0167-6911},
-    doi		= {10.1016/j.sysconle.2023.105655},
-    url		= {https://www.sciencedirect.com/science/article/pii/S0167691123002025},
-    author	= {Paul Schwerdtner and Tim Moser and Volker Mehrmann and Matthias Voigt}
+    title = {Optimization-based model order reduction of port-{H}amiltonian descriptor systems},
+    journal = {Systems Control Lett.},
+    volume = {182},
+    pages = {105655},
+    year = {2023},
+    issn = {0167-6911},
+    doi = {10.1016/j.sysconle.2023.105655},
+    url = {https://www.sciencedirect.com/science/article/pii/S0167691123002025},
+    author = {Paul Schwerdtner and Tim Moser and Volker Mehrmann and Matthias Voigt},
 }
 ```
 
